@@ -1,6 +1,6 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout android:id="@+id/draw_insets_frame_layout"
-                                                xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                android:id="@+id/draw_insets_frame_layout"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent">
 
@@ -21,14 +21,15 @@
                 <!--suppress AndroidLintContentDescription -->
                 <ImageView
                     android:id="@+id/photo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_photo_height"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="@dimen/detail_photo_height"
                     android:background="@drawable/photo_background_protection"/>
-
             </FrameLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
@@ -96,8 +97,8 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="bottom|end"
-        android:contentDescription="@string/action_share"
         android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/action_share"
         android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
         app:fabSize="normal"
